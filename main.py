@@ -24,6 +24,7 @@ def main():
     sub_dirs.append("conclusion")
 
     cover_letter = cldb.DataBase(main_dir, sub_dirs)
+    cover_letter.init_setup()
     cover_letter.combine(output_file, flag, keywords)
 
 

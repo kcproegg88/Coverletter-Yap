@@ -7,7 +7,6 @@ class DataBase:
     def __init__(self, main_dir, sub_dirs):
         self.main_dir = str(main_dir)
         self.sub_dirs = sub_dirs
-        self.init_setup()
         self.output_file = None
         self.flag = None
         self.keywords = None
