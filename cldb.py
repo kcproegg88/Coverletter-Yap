@@ -115,6 +115,7 @@ class DataBase:
 
     def combine(self, output_file, flag, keywords):
         self.create_file(output_file)
+        self.clear()
         self.output_file = output_file
         self.flag = flag
         self.keywords = keywords
@@ -126,6 +127,10 @@ class DataBase:
             file_path = os.path.join(nested_folder_path, f"{selection}.txt")
             self.append(self.read(file_path))
             print(f"{sub_dir} added.")
+
+    def clear(self):
+        with open(self.output_file, 'w') as file:
+            pass
 
     def append(self, content):
         file_path = os.path.join(self.main_dir, self.output_file)
